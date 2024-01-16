@@ -7,7 +7,7 @@ export default function Notification(props){
                <img src={props.image} alt="" className="h-10 w-10  " />
             </div>
             <div className="m-5 relative ">
-                <p><span className="hover:text-blue-700">{props.name}</span> {props.action} <span className=" hover:text-blue-800 ">{props.actionDone}</span>{props.isOnline && <div className="bg-red-600 h-2 w-2 rounded-full absolute right-0 top-1/2"></div>}</p>
+                <p><span className=" font-bold">{props.name}</span> {props.action} <span className=" hover:text-blue-800 ">{props.actionDone}</span>{props.isOnline && <div className="bg-red-600 h-2 w-2 rounded-full absolute right-0 top-1/2"></div>}</p>
                 <p className="text-gray-500">{props.lastSeen}</p>
             </div>           
         </section>

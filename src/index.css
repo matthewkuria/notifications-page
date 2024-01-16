@@ -4,9 +4,15 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+ --Very-light-grayish-blue: hsl(210, 60%, 98%);
+--Light-grayish-blue-1: hsl(211, 68%, 94%);
+--Light-grayish-blue-2: hsl(205, 33%, 90%);
+--Grayish-blue: hsl(219, 14%, 63%);
+--Dark-grayish-blue: hsl(219, 12%, 42%);
+--Very-dark-blue: hsl(224, 21%, 14%);
 
  
 }
@@ -16,13 +22,16 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 h1{
 
 }
 span{
-  color: rgb(125, 125, 125);
   font-weight: bold;
+  color: var(--Very-dark-blue);
+}
+span:hover{
+  color: var(--Blue);
 }
