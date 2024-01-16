@@ -1,8 +1,12 @@
 import React from "react";
 export default function Notification(props){
+    // dynamic set background color on condition of being online
+    const sectStyle ={
+        backgroundColor: props.isOnline ? 'hsl(210, 60%, 98%)' : 'white',
+    }
     return(
         <>
-        <section className="  flex items-center rounded-sm m-3 px-2 relative">
+        <section style={sectStyle} className="  flex items-center rounded-sm m-3 px-2 relative">
             <div className="">
                <img src={props.image} alt="" className="h-10 w-10  " />
             </div>
