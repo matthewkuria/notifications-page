@@ -1,10 +1,22 @@
-import { useState } from 'react'
+import React from 'react'
 import Notification from './components/Notification'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import data from './data'
 import './App.css'
 
 function App() {
+  const notiFeeds = data.map(item =>{
+    return(
+      <Notification
+             name ={item.name} 
+             image= {item.img}
+             action={item.action}
+             actionDone={item.actionDone}
+             lastSeen={item.lastSeen}
+             isOnline={item.isOnline}
+             MessageSent={item.privateMessage}
+      />
+    )
+  })
 
   return (
     <>
@@ -18,7 +30,7 @@ function App() {
                 </div>
             </div>
             <div className="">
-              <Notification />
+              {notiFeeds}
             </div>
           
      </section>
